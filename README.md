@@ -1,6 +1,6 @@
 # Minishell
 
-A lightweight Unix shell implementation in C, built as part of the 42 curriculum. Minishell replicates the core functionality of Bash with support for command execution, pipes, redirections, environment variables, signals, and heredocs.
+A lightweight Unix shell implementation in C that replicates Bash core functionality — command execution, pipes, redirections, environment variables, signals, and heredocs.
 
 ## Features
 
@@ -148,6 +148,4 @@ Three signal modes control behavior:
 
 Variables are stored as a linked list of `(name, value)` pairs. The `export` and `unset` builtins modify this list, which is converted to a `char **` array before being passed to `execve()`.
 
-## License
 
-This project is for educational purposes as part of the 42 curriculum.
