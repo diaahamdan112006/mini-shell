@@ -1,15 +1,3 @@
-/* ************************************************************************** */
-/*                                                                            */
-/*                                                        :::      ::::::::   */
-/*   get_dollars.c                                      :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
-/*   By: hel-mefe <marvin@42.fr>                    +#+  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/07/30 18:09:00 by hel-mefe          #+#    #+#             */
-/*   Updated: 2022/07/30 18:09:01 by hel-mefe         ###   ########.fr       */
-/*                                                                            */
-/* ************************************************************************** */
-
 #include "../../include/parsing.h"
 
 int	is_dollar_char_valid(char c)
@@ -53,11 +41,6 @@ t_dollar	*get_all_dollars(char *s, t_env *main_env)
 
 char	*get_dollar_val(char *var, t_env *main_env)
 {
-	size_t	i;
-	size_t	len;
-
-	len = ft_strlen(var);
-	i = 0;
 	while (main_env)
 	{
 		if (!ft_strcmp(var, main_env->name))

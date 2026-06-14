@@ -1,15 +1,3 @@
-/* ************************************************************************** */
-/*                                                                            */
-/*                                                        :::      ::::::::   */
-/*   exec_cmd.c                                         :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
-/*   By: ytijani <ytijani@student.42.fr>            +#+  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/07/20 19:01:19 by ytijani           #+#    #+#             */
-/*   Updated: 2022/07/30 15:27:51 by ytijani          ###   ########.fr       */
-/*                                                                            */
-/* ************************************************************************** */
-
 #include "../include/mini.h"
 
 void	wait_close(t_data *data, t_cmd *tmp, int pid)
@@ -39,9 +27,7 @@ void	wait_close(t_data *data, t_cmd *tmp, int pid)
 int	help_runcmd(t_data *data, t_cmd *cmd, t_env **env, char **str)
 {
 	int	pid;
-	int	i;
 
-	i = 0;
 	pid = fork();
 	handle_signals(1);
 	if (pid < 0)

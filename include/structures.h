@@ -1,15 +1,3 @@
-/* ************************************************************************** */
-/*                                                                            */
-/*                                                        :::      ::::::::   */
-/*   structures.h                                       :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
-/*   By: hel-mefe <marvin@42.fr>                    +#+  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/07/30 18:12:18 by hel-mefe          #+#    #+#             */
-/*   Updated: 2022/07/30 18:12:19 by hel-mefe         ###   ########.fr       */
-/*                                                                            */
-/* ************************************************************************** */
-
 #ifndef STRUCTURES_H
 # define STRUCTURES_H
 /***
@@ -22,7 +10,7 @@ typedef struct s_global
 	int			get_nb;
 	int			new;
 }	t_global;
-t_global	g_global;
+extern t_global	g_global;
 
 typedef struct s_env
 {

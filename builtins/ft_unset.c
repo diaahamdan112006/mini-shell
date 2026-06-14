@@ -1,15 +1,3 @@
-/* ************************************************************************** */
-/*                                                                            */
-/*                                                        :::      ::::::::   */
-/*   ft_unset.c                                         :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
-/*   By: ytijani <ytijani@student.42.fr>            +#+  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/06/21 17:21:23 by ytijani           #+#    #+#             */
-/*   Updated: 2022/07/30 15:06:43 by ytijani          ###   ########.fr       */
-/*                                                                            */
-/* ************************************************************************** */
-
 #include "../include/mini.h"
 
 int	check_unset(char **av)
@@ -76,11 +64,9 @@ void	ft_unset(t_env **env_v, char **name)
 {
 	int		i;
 	t_env	*new;
-	int		len;
 
 	new = NULL;
 	i = 1;
-	len = ft_strlen(name[i]);
 	while (name[i])
 	{
 		if (!check_export(name[i]))

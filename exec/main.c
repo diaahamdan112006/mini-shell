@@ -1,16 +1,14 @@
-/* ************************************************************************** */
-/*                                                                            */
-/*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
-/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/06/06 15:22:53 by marvin            #+#    #+#             */
-/*   Updated: 2022/07/30 17:55:08 by ytijani          ###   ########.fr       */
-/*                                                                            */
-/* ************************************************************************** */
-
 #include "../include/mini.h"
+
+t_global	g_global;
+
+void	ft_clear(void)
+{
+	printf("\033[2J\033[H");
+	printf("  \033[38;5;240m╭────────────────────────────────────────────╮\033[0m\n");
+	printf("  \033[38;5;240m│\t\033[0m  \033[38;5;197m●\033[0m \033[38;5;214m●\033[0m \033[38;5;40m●\033[0m   \033[1;37mdiyaa minishell\033[0m              \033[38;5;240m│\033[0m\n");
+	printf("  \033[38;5;240m╰────────────────────────────────────────────╯\033[0m\n\n");
+}
 
 void	run_builtin(t_env **env_v, char **av, t_cmd *cmd)
 {
@@ -28,6 +26,8 @@ void	run_builtin(t_env **env_v, char **av, t_cmd *cmd)
 		ft_unset(env_v, av);
 	else if ((ft_strcmp(av[0], "exit")) == 0)
 		ft_exit(av);
+	else if ((ft_strcmp(av[0], "clear")) == 0)
+		ft_clear();
 }
 
 void	help_runbuilt(t_cmd *cmd, t_env **env, int res, char **str)
@@ -87,13 +87,15 @@ int	main(int ac, char **av, char **env)
 	char	*s;
 	t_env	*env_v;
 	int		history;
-	char	*res;
 
-	res = NULL;
 	(void)av;
 	(void)ac;
 	env_v = NULL;
 	init_env(&env_v, env);
+	printf("\033]0;diyaa minishell\007");
+	printf("\n  \033[38;5;240m╭────────────────────────────────────────────╮\033[0m\n");
+	printf("  \033[38;5;240m│   \t\033[0m  \033[38;5;197m●\033[0m \033[38;5;214m●\033[0m \033[38;5;40m●\033[0m   \033[1;37mdiyaa minishell\033[0m              \033[38;5;240m│\033[0m\n");
+	printf("  \033[38;5;240m╰────────────────────────────────────────────╯\033[0m\n\n");
 	history = open("/tmp/.mini_History", O_CREAT | O_RDWR | O_APPEND, 0644);
 	s = NULL;
 	get_line(history, s);

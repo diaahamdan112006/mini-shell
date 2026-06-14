@@ -1,15 +1,3 @@
-/* ************************************************************************** */
-/*                                                                            */
-/*                                                        :::      ::::::::   */
-/*   builtins.c                                         :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
-/*   By: hel-mefe <marvin@42.fr>                    +#+  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/07/30 18:07:20 by hel-mefe          #+#    #+#             */
-/*   Updated: 2022/07/30 18:07:21 by hel-mefe         ###   ########.fr       */
-/*                                                                            */
-/* ************************************************************************** */
-
 #include "../../include/parsing.h"
 
 int	is_builtin(char *cmd)
@@ -19,7 +7,7 @@ int	is_builtin(char *cmd)
 	return (!ft_strcmp(cmd, "echo") || !ft_strcmp(cmd, "env")
 		|| !ft_strcmp(cmd, "cd") || !ft_strcmp(cmd, "pwd")
 		|| !ft_strcmp(cmd, "export") || !ft_strcmp(cmd, "unset")
-		|| !ft_strcmp(cmd, "exit"));
+		|| !ft_strcmp(cmd, "exit") || !ft_strcmp(cmd, "clear"));
 }
 
 void	mark_builtins(t_cmd *head)

@@ -1,15 +1,3 @@
-/* ************************************************************************** */
-/*                                                                            */
-/*                                                        :::      ::::::::   */
-/*   mini.h                                             :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
-/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/06/06 15:21:55 by marvin            #+#    #+#             */
-/*   Updated: 2022/07/30 15:27:16 by ytijani          ###   ########.fr       */
-/*                                                                            */
-/* ************************************************************************** */
-
 #ifndef MINI_H
 # define MINI_H
 
@@ -22,6 +10,7 @@
 # include <readline/history.h>
 # include <signal.h>
 # include <limits.h>
+# include <sys/wait.h>
 
 # include "../include/parsing.h"
 # include "../include/macros.h"
@@ -33,6 +22,7 @@ void		ft_export(t_env **env_v, char **av, int fd);
 void		ft_pwd(t_env **env_v);
 void		ft_env(t_env **env_v, char **av, int fd);
 void		ft_exit(char **av);
+void		ft_clear(void);
 /******	*******Help->builtins*******************/
 void		init_env(t_env **env_v, char **env);
 void		ft_sort(t_env **env_v);

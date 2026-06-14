@@ -1,15 +1,3 @@
-/* ************************************************************************** */
-/*                                                                            */
-/*                                                        :::      ::::::::   */
-/*   utils2.c                                           :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
-/*   By: ytijani <ytijani@student.42.fr>            +#+  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/07/30 00:19:56 by ytijani           #+#    #+#             */
-/*   Updated: 2022/07/30 17:56:03 by ytijani          ###   ########.fr       */
-/*                                                                            */
-/* ************************************************************************** */
-
 #include "../include/mini.h"
 
 void	init_spl(char **spl, char **av, int i, t_env **env_v)
@@ -32,16 +20,14 @@ void	init_spl(char **spl, char **av, int i, t_env **env_v)
 int	norm_cmd(t_cmd *cmd, t_data *data, t_env **env, char **str)
 {
 	int	pid;
-	int	v;
 
 	pid = -1;
-	v = 0;
 	while (cmd)
 	{
 		if (cmd->next == NULL)
 			pid = help_runcmd(data, cmd, env, str);
 		else
-			v = help_runcmd(data, cmd, env, str);
+			help_runcmd(data, cmd, env, str);
 		cmd = cmd->next;
 	}
 	return (pid);

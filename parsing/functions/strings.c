@@ -1,15 +1,3 @@
-/* ************************************************************************** */
-/*                                                                            */
-/*                                                        :::      ::::::::   */
-/*   strings.c                                          :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
-/*   By: hel-mefe <marvin@42.fr>                    +#+  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/07/30 18:08:02 by hel-mefe          #+#    #+#             */
-/*   Updated: 2022/07/30 18:08:03 by hel-mefe         ###   ########.fr       */
-/*                                                                            */
-/* ************************************************************************** */
-
 #include "../../include/parsing.h"
 
 void	ft_putstr(char *s)
@@ -59,8 +47,6 @@ char	*slice(char *s, size_t a, size_t b)
 	size_t	i;
 
 	len = b - a;
-	if (len < 0)
-		return (NULL);
 	res = (char *) malloc ((len + 1) * sizeof(char));
 	if (!res)
 		return (NULL);

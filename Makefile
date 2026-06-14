@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: ytijani <ytijani@student.42.fr>            +#+  +:+       +#+         #
+#    By: marvin <marvin@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/07/19 17:49:00 by ytijani           #+#    #+#              #
-#    Updated: 2022/07/31 13:15:23 by ytijani          ###   ########.fr        #
+#    Updated: 2026/05/05 13:51:19 by marvin           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -30,7 +30,7 @@ LOGO = "\n\n\
 \033[0;36m / /  / /_/ / / /|  /_/ /  ___/ // __  // /___ / /___ / /___    / / ___/ /___/ /  / /  \n\
 \033[0;36m/_/  /_//___//_/ |_//___/ /____//_/ /_//_____//_____//_____/   /_/ /____//____/  /_/   \n\
                                                                                        \n\
-\t\t\t\t\t\t\t \033[1;31mmade by (hel-mefe && ytijani)\n\n\n"
+\t\t\t\t\t\t\t \033[1;31mmade by (DIYAA L KING)\n\n\n"
 
 SUCCESS = "\033[1;32m \n\t\t\t 🐙 MINISHELL HAVE BEEN CREATED SUCCESSFULLY! 🐙  \n\n"
 
@@ -45,7 +45,7 @@ $(NAME): $(OBJCT)
 
 all : $(NAME)
 $(NAME) : $(OBJCT)
-	@$(CC)  $(CFALGS) -lreadline -L /Users/ytijani/.brew/opt/readline/lib -I /Users/ytijani/.brew/opt/readline/include $(SRC) -o $(NAME)
+	@$(CC)  $(CFLAGS) $(SRC) -o $(NAME) -lreadline
 	@printf $(LOGO)
 clean :
 	@rm -f $(OBJCT)
